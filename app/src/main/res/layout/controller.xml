@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="450dp"
+    android:background="#333">
+
+    <Button
+        android:id="@+id/cont_left"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="0dp"
+        android:background="@drawable/up"
+        />
+    <Button
+        android:id="@+id/cont_right"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="160dp"
+        android:background="@drawable/down"
+        />
+    <Button
+        android:id="@+id/cont_down"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/left"
+        />
+    <Button
+        android:id="@+id/cont_up"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/right2"
+        />
+
+    <Button
+        android:id="@+id/cont_cw"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/cw"
+        />
+    <Button
+        android:id="@+id/cont_ccw"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/ccw"
+        />
+
+</RelativeLayout>

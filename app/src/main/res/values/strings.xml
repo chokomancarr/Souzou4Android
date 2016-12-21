@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">スマロボ(想像演習用</string>
+    <string-array name="drawer_items">
+        <item>実行</item>
+        <item>リセット</item>
+        <item>保存</item>
+        <item>読み込む</item>
+        <item>パソコン連携</item>
+        <item>使用方法</item>
+    </string-array>
+    <string name="editor_name">プログラム編集</string>
+    <string name="add">追加</string>
+    <string name="options">コマンド</string>
+    <string name="options2">オプション</string>
+    <string name="debug">デバッグ表示</string>
+    <string name="version">v1.0.2</string>
+    <string name="prev">前へ</string>
+    <string name="next">次へ</string>
+    <string name="close">閉じる</string>
+    <string name="nevershow">以降表示しない</string>
+    <string name="settings_empty">特に設定はありませんが、なんかあったらここに入れる予定です。</string>
+    <string name="hatena">( ˘ω˘)</string>
+    <string name="setdebugstring">メッセージ入力</string>
+    <string name="clear">クリア</string>
+    <string name="send">送る</string>
+    <string name="edit_tr">移動アクション</string>
+    <string name="edit_rot">回転アクション</string>
+    <string name="edit_mic">音量を待つ</string>
+    <string name="edit_prox">距離センサー</string>
+    <string name="edit_wait">待つ</string>
+    <string name="isSpeed">速度制</string>
+    <string name="invert">逆方向</string>
+    <string name="time2wait">待つ時間（ミリ秒）</string>
+    <string name="white_screen">白い背景</string>
+    <string name="conn_ip">パソコン連携</string>
+    <string name="sensor_disclaimer">＊機種によってセンサー情報が異なることがあります。</string>
+    <string name="save">プログラムを保存</string>
+    <string name="load">プログラムを読み込む</string>
+    <string name="save_exist">同じ名前のプログラムがすでに存在しています。</string>
+    <string name="help_welcome">スマロボ使ってくれて\nありがとぉ！</string>
+    <string name="help_intro">早速使い方を勉強しよう。</string>
+    <string name="help_swipe">上にスワイプ</string>
+</resources>

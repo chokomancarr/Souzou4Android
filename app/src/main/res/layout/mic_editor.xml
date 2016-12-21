@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="220dp"
+    android:background="#333">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/edit_mic"
+        android:textColor="#eee"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/textView" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/microphone"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="190dp"
+        android:layout_marginLeft="190dp"/>
+
+    <Switch
+        android:id="@+id/mic_ed_invert"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:trackTint="#fff"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="逆転"
+        android:textColor="#eee"
+        android:textSize="15sp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="70dp"
+        android:layout_marginStart="70dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="音量しきい値"
+        android:textColor="#eee"
+        android:textSize="18sp"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"/>
+    <TextView
+        android:id="@+id/mic_ed_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0db"
+        android:textColor="#eee"
+        android:textSize="15sp"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"/>
+    <SeekBar
+        android:id="@+id/mic_ed_slider"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:progress="0"
+        android:layout_marginTop="109dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="現在の音量"
+        android:textColor="#eee"
+        android:textSize="18sp"
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <ProgressBar
+        android:id="@+id/mic_ed_preview"
+        style = "?android:progressBarStyleHorizontal"
+        android:layout_width="215dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        android:progressTint="#ff0"
+        android:progress="0"/>
+
+    <Button
+    android:id="@+id/mic_ed_optionbutton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="180dp"
+    android:text="@string/options2"
+    android:textColor="@color/colorAccent"
+    android:background="#333"/>
+
+    <Button
+        android:id="@+id/mic_ed_okbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="180dp"
+        android:text="適用"
+        android:textColor="@color/colorAccent"
+        android:background="#333"/>
+</RelativeLayout>

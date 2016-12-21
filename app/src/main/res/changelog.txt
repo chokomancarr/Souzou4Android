@@ -1,0 +1,7 @@
+1.02
+
+
+1.01a
+-added audio sensor
+-added rotation event
+-core IO
