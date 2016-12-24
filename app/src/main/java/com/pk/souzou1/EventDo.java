@@ -29,13 +29,13 @@ public class EventDo extends EventBase {
         }
     }
 
-    public byte[] GetOutput () { //10ty_peiI 0val_valv
+    public byte[] GetOutput () { //10ty_pCiI 0val_valv
         byte[] b = new byte[use2Vals? 4 : 2];
         //b[0] = (byte)(128 | ((id & 7) << 4) | (a & (1 | 2 | 4 | 8)));
-        b[0] = (byte)(128 | (type & 60) | (inv? 2 : 0) | (isWait? 1 : 0));
+        b[0] = (byte)(128 | (type << 3) | (inv? 2 : 0) | (isWait? 1 : 0));
         b[1] = (byte)(val & 127);
         if (use2Vals) {
-            b[2] =(byte)(128 | ((type-1) & 60) | (inv2? 2 : 0) | (isWait? 1 : 0));
+            b[2] =(byte)(128 | ((type-1) << 3) | (inv2? 2 : 0) | (isWait? 1 : 0));
             b[3] = (byte)(val2 & 127);
         }
         return b;

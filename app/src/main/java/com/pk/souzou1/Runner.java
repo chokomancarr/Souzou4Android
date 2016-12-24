@@ -77,7 +77,10 @@ public class Runner {
                                     EventDo e = (EventDo) c.events.get(activeIndex);
                                     byte[] bb = e.GetOutput();
                                     serialStuff.Write(bb, 500);
-                                    main.d2("do " + tobinary(bb[0]) + " " + tobinary(bb[1]));
+                                    if (bb.length < 3)
+                                        main.d2("do " + tobinary(bb[0]) + " " + tobinary(bb[1]));
+                                    else
+                                        main.d2("do " + tobinary(bb[0]) + " " + tobinary(bb[1]) + tobinary(bb[2]) + " " + tobinary(bb[3]));
                                     if (e.isWait) {
                                         waitingList.add((byte) (128 + e.type + 1));
                                         waiting = true;
