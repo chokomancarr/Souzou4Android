@@ -91,14 +91,14 @@ public class EditTranslateDialog extends DialogFragment {
             }
         });
         final TextView valVX = (TextView)v.findViewById(R.id.do2_ed_valuex);
-        valVX.setText(String.format(Locale.JAPAN, "%.1f", isSp? valX*0.1f : valX*1f));
+        valVX.setText(String.format(Locale.JAPAN, "%.1f", isSp? valX*0.1074f : valX*1074f));
         SeekBar sbx = (SeekBar)v.findViewById(R.id.do2_ed_sliderx);
         sbx.setProgress(valX);
         sbx.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 valX = progress;
-                valVX.setText(String.format(Locale.JAPAN, "%.1f", isSp? valX*0.1f : valX*1f));
+                valVX.setText(String.format(Locale.JAPAN, "%.1f", isSp? valX*0.1074f : valX*1074f));
             }
 
             @Override
@@ -108,14 +108,14 @@ public class EditTranslateDialog extends DialogFragment {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
         final TextView valVY = (TextView)v.findViewById(R.id.do2_ed_valuey);
-        valVY.setText(String.format(Locale.JAPAN, "%.1f", isSp? valY*0.1f : valY*1f));
+        valVY.setText(String.format(Locale.JAPAN, "%.1f", isSp? valY*0.1074f : valY*1074f));
         SeekBar sby = (SeekBar)v.findViewById(R.id.do2_ed_slidery);
         sby.setProgress(valY);
         sby.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 valY = progress;
-                valVY.setText(String.format(Locale.JAPAN, "%.1f", isSp? valY*0.1f : valY*1f));
+                valVY.setText(String.format(Locale.JAPAN, "%.1f", isSp? valY*0.1074f : valY*1074f));
             }
 
             @Override
@@ -135,7 +135,7 @@ public class EditTranslateDialog extends DialogFragment {
                 c.isWait = !isSp;
                 //c.type = isX+1;
                 if (isSp)
-                    c.Str("移動（" + String.format(Locale.JAPAN, "%.1f", (invertX? -valX*0.1f : valX*0.1f)) + ", " + String.format(Locale.JAPAN, "%.1f", (invertY? -valY*0.1f : valY*0.1f)) + "）cm毎秒");
+                    c.Str("移動（" + String.format(Locale.JAPAN, "%.1f", (invertX? -valX*0.1074f : valX*0.1074f)) + ", " + String.format(Locale.JAPAN, "%.1f", (invertY? -valY*0.1074f : valY*0.1074f)) + "）cm毎秒");
                 else
                     c.Str("移動（" + (invertX? -valX : valX) + ", " + (invertY? -valY : valY) + "）cm");
                 dismiss();
@@ -154,7 +154,7 @@ public class EditTranslateDialog extends DialogFragment {
         c.isWait = isWait;
         c.use2Vals = true;
         if (!isWait)
-            c.Str("移動（" + String.format(Locale.JAPAN, "%.1f", (invertX? -valX*0.1f : valX*0.1f)) + ", " + String.format(Locale.JAPAN, "%.1f", (invertY? -valY*0.1f : valY*0.1f)) + "）cm毎秒");
+            c.Str("移動（" + String.format(Locale.JAPAN, "%.1f", (invertX? -valX*0.1074f : valX*0.1074f)) + ", " + String.format(Locale.JAPAN, "%.1f", (invertY? -valY*0.1074f : valY*0.1074f)) + "）cm毎秒");
         else
             c.Str("移動（" + (invertX? -valX : valX) + ", " + (invertY? -valY : valY) + "）cm");
     }

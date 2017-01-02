@@ -58,12 +58,13 @@ public class EditRotateDialog extends DialogFragment {
                 c.isWait = !isSp;
                 c.type = 0;
                 if (isSp)
-                    c.Str("回転(" + (invert? "-" : "") + Math.round(val*1.8f) + "°毎秒)");
+                    c.Str("回転(" + (invert? "-" : "") + Math.round(val*0.559f) + "°毎秒)");
                 else
                 c.Str("回転(" + (invert? "-" : "") + Math.round(val*1.8f) + "°)");
                 dismiss();
             }
         });
+        final TextView valV = (TextView)v.findViewById(R.id.do_ed_value);
         Switch useSp = ((Switch)v.findViewById(R.id.do_ed_useSp));
         useSp.setChecked(isSp);
         useSp.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -75,9 +76,12 @@ public class EditRotateDialog extends DialogFragment {
                     robot.setRotation(val*1.8f*(invert? -1 : 1));
                     counter = val*1.8f*(invert? -1 : 1);
                     tv.setText("回転角度");
+                    valV.setText(String.format(Locale.JAPAN, "%.1f", val*1.8f));
                 }
-                else
+                else {
+                    valV.setText(String.format(Locale.JAPAN, "%.1f", val*0.559f));
                     tv.setText("回転速度");
+                }
             }
         });
         Switch invertSw = ((Switch)v.findViewById(R.id.do_ed_invert));
@@ -93,15 +97,15 @@ public class EditRotateDialog extends DialogFragment {
         });
         SeekBar slider = ((SeekBar)v.findViewById(R.id.do_ed_slider));
         slider.setProgress(val);
-        final TextView valV = (TextView)v.findViewById(R.id.do_ed_value);
         slider.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 val = progress;
                 if (!isSp) {
                     robot.setRotation(val*1.8f*(invert? -1 : 1));
+                    valV.setText(String.format(Locale.JAPAN, "%.1f", val*1.8f));
                 }
-                valV.setText(String.format(Locale.JAPAN, "%.1f", val*1.8f));
+                else valV.setText(String.format(Locale.JAPAN, "%.1f", val*0.559f));
             }
 
             @Override
@@ -126,7 +130,7 @@ public class EditRotateDialog extends DialogFragment {
             public void run() {
                 if (loop) {
                     if (isSp) {
-                        counter += (invert? -1 : 1) * val * 0.01 * 0.18f * delay;
+                        counter += (invert? -1 : 1) * val * 0.01 * 0.0559f * delay;
                         if (counter > 360f)
                             counter -= 360f;
                         else if (counter < 0)
@@ -147,7 +151,7 @@ public class EditRotateDialog extends DialogFragment {
         c.inv = invert;
         c.isWait = !isWait;
         if (!isWait)
-            c.Str("回転(" + (invert? "-" : "") + Math.round(val*1.8f) + "°毎秒)");
+            c.Str("回転(" + (invert? "-" : "") + Math.round(val*0.559f) + "°毎秒)");
         else
             c.Str("回転(" + (invert? "-" : "") + Math.round(val*1.8f) + "°)");
     }
